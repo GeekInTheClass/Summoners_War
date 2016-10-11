@@ -13,6 +13,12 @@ for key in meetingRooms.keys {
 }
 print (sum)
 
+
+// Answer for Question1
+print(meetingRooms.reduce(0, {$0.0 + $0.1.key.hash >> $0.1.value}))
+
+
+
 var numbers:[Int] = []
 var diceRoll:Int = Int(arc4random_uniform(6) + 1)
 print(diceRoll)
