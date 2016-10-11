@@ -38,6 +38,8 @@ func ja(limit : Int){
     ja(limit : limi)
 }
 
+ja(limit: diceRoll)
+
 for index in numbers{
     var tmp:Int = 0
     var ind = index
