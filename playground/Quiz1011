@@ -23,9 +23,19 @@ var numbers:[Int] = []
 var diceRoll:Int = Int(arc4random_uniform(6) + 1)
 print(diceRoll)
 diceRoll %= 15
-for index in 1...diceRoll {
+
+/*for index in 1...diceRoll {
     
     numbers.append(15)
+}*/
+
+func ja(limit : Int){
+    if limit == 0 {
+        return
+    }
+    numbers.append(15)
+    let limi : Int = limit - 1
+    ja(limit : limi)
 }
 
 for index in numbers{
@@ -39,9 +49,10 @@ for index in numbers{
     print("\(tmp) ")
 }
 
-for free in 1...5{
-    print("free point for you")
-}
+var freep:[String] = ["free point for you","free point for you","free point for you","free point for you","free point for you"]
+freep.map({ print("\($0)")})
+
+
 
 let keyMap:[Double:Int] = [3.2:10, 2.2:8, 1.8:9, 1.0:7, 4.5:6, 9.0:1]
 let Dic:[String:Double] = ["Apple":2.2, "Pineapple":1.0, "Pen":1.8, "ApplePen":3.2, "PineapplePen":9.0, "PenPineappleApplePen":4.5]
