@@ -68,3 +68,8 @@ for str in Dic.keys {
 }
 
 print(result)
+
+//Answer
+
+let newResult = Array(Dic.keys).filter{ keyMap[Dic[$0]!]! % 2 == 0}
+print(newResult.joined())
