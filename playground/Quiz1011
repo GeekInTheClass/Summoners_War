@@ -1,0 +1,51 @@
+var meetingRooms:[String:Int] = ["Banksy":4, "Rivera":8, "Kahlo":8, "Picasso":10, "Cezanne":20, "Matisse":30]
+
+var sum = 0
+for key in meetingRooms.keys {
+    var hash = key.hash
+    if (meetingRooms[key]! % 2 == 0) {
+        hash = hash >> meetingRooms[key]!
+    } else {
+        hash = hash << meetingRooms[key]!
+    }
+    
+    sum += hash
+}
+print (sum)
+
+var numbers:[Int] = []
+var diceRoll:Int = Int(arc4random_uniform(6) + 1)
+print(diceRoll)
+diceRoll %= 15
+for index in 1...diceRoll {
+    
+    numbers.append(15)
+}
+
+for index in numbers{
+    var tmp:Int = 0
+    var ind = index
+    tmp += index%10
+    ind /= 10
+    if index == 0{
+        break
+    }
+    print("\(tmp) ")
+}
+
+for free in 1...5{
+    print("free point for you")
+}
+
+let keyMap:[Double:Int] = [3.2:10, 2.2:8, 1.8:9, 1.0:7, 4.5:6, 9.0:1]
+let Dic:[String:Double] = ["Apple":2.2, "Pineapple":1.0, "Pen":1.8, "ApplePen":3.2, "PineapplePen":9.0, "PenPineappleApplePen":4.5]
+
+var result = ""
+for str in Dic.keys {
+    let cnt = keyMap[Dic[str]!]!
+    if (cnt % 2 == 0) {
+        result += str
+    }
+}
+
+print(result)
